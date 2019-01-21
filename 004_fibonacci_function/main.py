@@ -1,6 +1,4 @@
-"""
-	Some tests using fibonacci series.
-"""
+"""Some tests using fibonacci series."""
 
 from fibonacci import fibo
 

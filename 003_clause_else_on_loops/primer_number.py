@@ -1,12 +1,11 @@
-"""
-	This program test if a given integer is a primer number.
-"""
+"""This program test if a given integer is a primer number."""
 
 from sys import argv
 
 class TooManyArgsError(Exception):
 	"""An exception class to control inputs.
-		Raise exception when the user gives more than one argument.
+	
+	Raise exception when the user gives more than one argument.
 	"""
 	pass
 

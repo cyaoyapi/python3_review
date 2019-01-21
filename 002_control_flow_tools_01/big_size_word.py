@@ -1,7 +1,4 @@
-"""
-	This program is executed with a list of words(in command line).
-	It ultimately displays words larger than 10 characters.
-"""
+"""This program displays words larger than 10 characters."""
 
 from sys import argv, exit 
 

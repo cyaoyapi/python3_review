@@ -1,5 +1,5 @@
-"""
-	This program makes the following operations with 2 given integers :
+"""This program makes basic mathematic operation operations with 2 given integers.
+
 	  - Addition
 	  - Difference
 	  - Multiplication

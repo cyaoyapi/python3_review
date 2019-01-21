@@ -1,7 +1,4 @@
-"""
-	Some tests using fibonacci series.
-"""
-
+"""Some tests using fibonacci series."""
 
 def fibo(n):
 	"""Display fibonacci serie number until the given number."""
