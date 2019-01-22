@@ -13,9 +13,9 @@ class QuizFunctionsTests(unittest.TestCase):
 		['The system admin', 'The tester', 'The developer'], 1]
 
 	def test_display_question_correct(self):
-		"""Unit test.
+		"""Unit test(1) on function 'test_display_question'.
 
-		Given : a selected question with correct format
+		Given : a selected question(list) with correct format
 		When : excute the function instruction
 		Then : return the correct display string 
 		"""
@@ -24,5 +24,18 @@ class QuizFunctionsTests(unittest.TestCase):
 		correct_display = "Who write the unit test in software project ?\n" + \
 		  "  1- The system admin\n" + "  2- The tester\n" + "  3- The developer\n"
 		self.assertEqual(returned_string, correct_display)
+
+	def test_display_question_selected_question_with_bad_size(self):
+		"""Unit test(2) on function 'test_display_question'.
+
+		Given : a question(list) with bad size (Different than 3)
+		When : excute the function instruction
+		Then : raise correct corresponding exception
+		"""
+
+		given_question = ['Who write the unit test in software project ?',
+		['The system admin', 'The tester', 'The developer'], 1, "More elements"]
+		with self.assertRaises(ValueError):
+			display_question(given_question)
 
 
