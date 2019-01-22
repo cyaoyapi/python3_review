@@ -52,3 +52,18 @@ class QuizFunctionsTests(unittest.TestCase):
 		with self.assertRaises(ValueError):
 			display_question(given_question)
 
+	def test_display_question_selected_question_with_bad_3th_element(self):
+		"""Unit test(4) on function 'test_display_question'.
+
+		Given : a question(list) with bad 3th element which must be 
+				an integer(the index of the correct answer in the choices' list)
+		When : excute the function instruction
+		Then : raise correct corresponding exception
+		"""
+
+		given_question = ['Who write the unit test in software project ?',
+		['The system admin', 'The tester', 'The developer'], "1"]
+		with self.assertRaises(ValueError):
+			display_question(given_question)
+
+
