@@ -4,7 +4,9 @@
 def display_question(selected_question: list=None) -> str:
 	"""This function displays question and its choices."""
 	
-	if len(selected_question) != 3:
+	if not isinstance(selected_question, (list, tuple)):
+		raise ValueError("The given argument must be a list or a tuple !")
+	elif len(selected_question) != 3:
 		raise ValueError("The given argument must be a list of 3 elements !")
 	elif not isinstance(selected_question[1], (list, tuple)):
 		raise ValueError("The second element of given argument must be a list or a tuple !")

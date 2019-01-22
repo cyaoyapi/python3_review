@@ -25,8 +25,23 @@ class QuizFunctionsTests(unittest.TestCase):
 		  "  1- The system admin\n" + "  2- The tester\n" + "  3- The developer\n"
 		self.assertEqual(returned_string, correct_display)
 
-	def test_display_question_selected_question_with_bad_size(self):
+	def test_display_question_selected_question_isnot_list_or_tuple(self):
 		"""Unit test(2) on function 'test_display_question'.
+
+		Given : a given value is not a list or a tuple 
+		When : excute the function instruction
+		Then : raise correct corresponding exception
+		"""
+
+		given_question = {
+		"q":'Who write the unit test in software project ?',
+		"r":['The system admin', 'The tester', 'The developer'],
+		"ri":1,
+		}
+		with self.assertRaises(ValueError):
+			display_question(given_question)
+	def test_display_question_selected_question_with_bad_size(self):
+		"""Unit test(3) on function 'test_display_question'.
 
 		Given : a question(list) with bad size (Different than 3)
 		When : excute the function instruction
@@ -39,7 +54,7 @@ class QuizFunctionsTests(unittest.TestCase):
 			display_question(given_question)
 
 	def test_display_question_selected_question_with_bad_2nd_element(self):
-		"""Unit test(3) on function 'test_display_question'.
+		"""Unit test(4) on function 'test_display_question'.
 
 		Given : a question(list) with bad 2nd element which must be 
 				a list or tuple(of choices)
@@ -53,7 +68,7 @@ class QuizFunctionsTests(unittest.TestCase):
 			display_question(given_question)
 
 	def test_display_question_selected_question_with_bad_3th_element(self):
-		"""Unit test(4) on function 'test_display_question'.
+		"""Unit test(5) on function 'test_display_question'.
 
 		Given : a question(list) with bad 3th element which must be 
 				an integer(the index of the correct answer in the choices' list)
